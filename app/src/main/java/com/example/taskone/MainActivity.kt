@@ -6,18 +6,20 @@ import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
-    //рабочая функция
-    fun funktion(a: Int, b:Int){
-        for (n in a..b) {
-            //вывод каждого из чисел
-            println(n)
-//            Log.d("Terminal", "$n") //проверка через логи
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //рабочая функция
+        fun funktion(a: Int, b:Int){
+            for (n in a..b) {
+                if (n % 2 == 1){
+                    //вывод только простых чисел
+                    println(n)
+                    Log.d("Terminal", "$n") //проверка через логи
+                }
+            }
+        }
 
         //переменные-константы т.к не собираюсь их менять
         val a = 10
